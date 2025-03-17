@@ -1,0 +1,102 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* 🍏 Ultra-Vibrant Fruit Club Colors */
+@layer base {
+  /* 🍏 Apple Theme (Neon Green) */
+  :root {
+    --primary: #00ff00; /* Pure Neon Green */
+    --secondary: #d49500; /* Deep Orange-Gold for Contrast */
+    --background: #a4ff3d; /* Lighter Green (more contrast with secondary) */
+    --text: #0a0a0a; /* Deep Black for Max Contrast */
+  }
+
+  /* 🍇 Grape Theme (Electric Purple) */
+  [data-theme="grape"] {
+    --primary: #9900ff; /* Super Electric Purple */
+    --secondary: #ffccff; /* Soft Pastel Pink (Contrasts with Deep Purple) */
+    --background: #c77dff; /* Brighter Lavender for better separation */
+    --text: #210035; /* Deepest Purple */
+  }
+
+  /* 🍌 Banana Theme (Extreme Yellow) */
+  [data-theme="pinapple"] {
+    --primary: #ffea00; /* Blinding Banana Yellow */
+    --secondary: #ff6600; /* Deep Electric Orange */
+    --background: #ffe94d; /* Slightly deeper yellow (so secondary pops) */
+    --text: #4d2800; /* Dark Brown for Readability */
+  }
+
+  /* 🍓 Strawberry Theme (Hot Pink & Red) */
+  [data-theme="strawberry"] {
+    --primary: #ff0055; /* Ultra Neon Pink-Red */
+    --secondary: #ffcc33; /* Bright Yellow-Orange for Max Readability */
+    --background: #ff6699; /* A deeper pink so text & secondary stand out */
+    --text: #40000d; /* Even Darker Berry Red */
+  }
+}
+
+
+/* 🔥 Animated Gradient Background */
+@layer base {
+  .animated-bg {
+    background: linear-gradient(270deg, var(--primary), var(--secondary));
+    background-size: 400% 400%;
+    animation: gradientShift 6s infinite alternate ease-in-out;
+  }
+
+  @keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    100% { background-position: 100% 50%; }
+  }
+}
+
+/* 💡 Pulsing Neon Glow Effect */
+@layer components {
+  .neon-glow {
+    animation: glow 1.5s infinite alternate ease-in-out;
+  }
+
+  @keyframes glow {
+    0% {
+      box-shadow: 0 0 10px var(--primary), 0 0 20px var(--secondary);
+    }
+    100% {
+      box-shadow: 0 0 20px var(--primary), 0 0 40px var(--secondary);
+    }
+  }
+
+  /* 🍏 Floating Fruit Animation */
+  .floating {
+    animation: float 4s infinite alternate ease-in-out;
+  }
+
+  @keyframes float {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-20px); }
+  }
+
+  /* 🍎 Button Style */
+  .fruit-button {
+    @apply px-6 py-3 font-bold text-white rounded-lg transition-transform duration-200 ease-in-out;
+  }
+
+  .fruit-button:hover {
+    transform: scale(1.1);
+  }
+}
+@layer base {
+  /* Apply fonts globally */
+  body {
+    font-family: "Fredoka", sans-serif;
+  }
+
+  h1, h2, h3 {
+    font-family: "Bungee", sans-serif;
+  }
+
+  .alt-text {
+    font-family: "Baloo 2", sans-serif;
+  }
+}
