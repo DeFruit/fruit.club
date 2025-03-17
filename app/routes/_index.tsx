@@ -20,14 +20,18 @@ export default function Index() {
     <div>
       <WalletContextProvider>
         <WalletConnectionModal />
-        <Navbar />
-        <Hero scrollToBottom={scrollToBottom} />
-        <TeamFun />
-        <GameLoop />
-        <Features />
-        <JuiceToken />
-        <GetNotified />
-        <Footer />
+        <div className="flex flex-col gap-4">
+          <Navbar />
+          <div>
+            <Hero scrollToBottom={scrollToBottom} />
+            <TeamFun />
+            <GameLoop />
+            <Features />
+            <JuiceToken />
+            <GetNotified />
+            <Footer />
+          </div>
+        </div>
       </WalletContextProvider>
       <div ref={bottomRef} className="h-1"></div>
     </div>

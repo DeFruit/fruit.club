@@ -6,7 +6,7 @@ export default function Hero({ scrollToBottom }: { scrollToBottom: () => void })
 
   const { setDisplayWalletConnectModal } = useContext(WalletContext);
   return (
-    <section className="flex flex-col md:flex-row items-center justify-between min-h-screen pl-8 md:pl-16 lg:pl-24">
+    <section className="flex flex-col md:flex-row items-center justify-between min-h-screen mx-3 md:pl-16 lg:pl-24 mt-16 sm:mt-1">
       {/* Left Side: Text Content */}
       <motion.div
         className="md:w-1/2 text-left"

@@ -13,7 +13,7 @@ export default function TeamFun() {
       <div className="max-w-5xl mx-auto text-center">
         <h2 className="text-4xl lg:text-5xl font-bold mb-6">Join a team!</h2>
         <p className="text-gray-300 mb-10">Play, Stake and earn with your teammates.</p>
-        <div className="grid md:grid-cols-4 gap-8">
+        <div className="grid md:grid-cols-4 gap-8 mx-3">
           {teams.map((team, index) => (
             <motion.div
               key={index}

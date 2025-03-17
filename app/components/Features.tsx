@@ -13,7 +13,7 @@ export default function Features() {
       <div className="max-w-5xl mx-auto text-center">
         <h2 className="text-4xl lg:text-5xl font-bold mb-6">Only on Algorand</h2>
         <p className=" mb-10">The only blockchain that can handle all the fun!</p>
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-3 gap-8 mx-3">
           {features.map((feature, index) => (
             <motion.div
               key={index}
