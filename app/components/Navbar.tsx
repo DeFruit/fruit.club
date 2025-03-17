@@ -28,8 +28,9 @@ export default function Navbar() {
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.95 }}
           transition={{ delay: 0.7, duration: 0.6, ease: "easeOut" }}
+          onClick={() => window.open("https://x.com/fruitclubalgo", "_blank")}
         >
-          Get squeezing!
+          Follow us on X!
         </motion.button>
       </div>
     </motion.nav>

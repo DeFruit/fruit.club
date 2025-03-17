@@ -11,9 +11,16 @@
     "typecheck": "tsc"
   },
   "dependencies": {
+    "@algorandfoundation/algokit-utils": "^8.2.2",
+    "@blockshake/defly-connect": "^1.2.1",
+    "@perawallet/connect": "^1.4.2",
     "@remix-run/node": "^2.16.0",
     "@remix-run/react": "^2.16.0",
     "@remix-run/serve": "^2.16.0",
+    "@txnlab/use-wallet-react": "^4.0.0",
+    "@walletconnect/modal": "^2.7.0",
+    "@walletconnect/sign-client": "^2.19.1",
+    "algosdk": "^3.2.0",
     "framer-motion": "^12.5.0",
     "isbot": "^4.1.0",
     "lucide-react": "^0.482.0",
@@ -41,5 +48,8 @@
   },
   "engines": {
     "node": ">=20.0.0"
+  },
+  "overrides": {
+    "picomatch": "2.3.1"
   }
 }
