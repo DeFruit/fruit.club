@@ -41,7 +41,7 @@ export default function Hero({ scrollToBottom }: { scrollToBottom: () => void })
             transition={{ delay: 0.7, duration: 0.6, ease: "easeOut" }}
             onClick={scrollToBottom}
           >
-            Join the Fun!
+            Fruit curious?
           </motion.button>
           <motion.button
             className="fruit-button bg-white text-primary mt-6 text-2xl"
