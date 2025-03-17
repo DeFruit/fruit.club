@@ -15,13 +15,13 @@ export default function Navbar() {
 
   return (
     <motion.nav
-      className="fixed top-0 w-full bg-transparent text-white py-4 px-6 "
+      className="fixed top-0 w-full bg-background text-white py-4 px-6 "
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.5 }}
     >
       <div className="max-w-6xl mx-auto flex justify-between">
-        <h1 className="text-2xl font-bold">FRUIT.CLUB</h1>
+        <h1 className="text-4xl font-bold">FRUIT.CLUB</h1>
         <ThemeSwitcher setTheme={setTheme} />
         <motion.button
           className="fruit-button bg-primary neon-glow"

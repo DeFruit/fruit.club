@@ -4,9 +4,17 @@
 
 /* 🍏 Ultra-Vibrant Fruit Club Colors */
 @layer base {
-  /* 🍏 Apple Theme (Neon Green) */
+  /* 🍓 Strawberry Theme (Hot Pink & Red) */
   :root {
-    --primary: #00ff00; /* Pure Neon Green */
+    --primary: #ff0055; /* Ultra Neon Pink-Red */
+    --secondary: #ffcc33; /* Bright Yellow-Orange for Max Readability */
+    --background: #ff6699; /* A deeper pink so text & secondary stand out */
+    --text: #40000d; /* Even Darker Berry Red */
+  }
+
+  /* 🍏 Apple Theme (Neon Green) */
+  [data-theme="apple"] {
+    --primary: #32cd32; /* A more muted lime green */
     --secondary: #d49500; /* Deep Orange-Gold for Contrast */
     --background: #a4ff3d; /* Lighter Green (more contrast with secondary) */
     --text: #0a0a0a; /* Deep Black for Max Contrast */
@@ -22,18 +30,10 @@
 
   /* 🍌 Banana Theme (Extreme Yellow) */
   [data-theme="pinapple"] {
-    --primary: #ffea00; /* Blinding Banana Yellow */
+    --primary: #ffd700; /* Softer Golden Yellow */
     --secondary: #ff6600; /* Deep Electric Orange */
     --background: #ffe94d; /* Slightly deeper yellow (so secondary pops) */
     --text: #4d2800; /* Dark Brown for Readability */
-  }
-
-  /* 🍓 Strawberry Theme (Hot Pink & Red) */
-  [data-theme="strawberry"] {
-    --primary: #ff0055; /* Ultra Neon Pink-Red */
-    --secondary: #ffcc33; /* Bright Yellow-Orange for Max Readability */
-    --background: #ff6699; /* A deeper pink so text & secondary stand out */
-    --text: #40000d; /* Even Darker Berry Red */
   }
 }
 

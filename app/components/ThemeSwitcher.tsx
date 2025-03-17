@@ -12,14 +12,14 @@ interface ThemeSwitcherProps {
 export default function ThemeSwitcher({ setTheme }: ThemeSwitcherProps) {
   const [activeTheme, setActiveTheme] = useState(() =>
     typeof window !== "undefined"
-      ? localStorage.getItem("theme") || "apple"
-      : "apple"
+      ? localStorage.getItem("theme") || "strawberry"
+      : "strawberry"
   );
 
   useEffect(() => {
     if (typeof document !== "undefined") {
       setActiveTheme(
-        document.documentElement.getAttribute("data-theme") || "apple"
+        document.documentElement.getAttribute("data-theme") || "strawberry"
       );
     }
   }, []);
