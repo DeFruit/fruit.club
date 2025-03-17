@@ -1,8 +1,10 @@
 import { motion } from "framer-motion";
+import { useContext, useRef } from "react";
+import { WalletContext } from "~/context/walletContext";
 
-export default function Hero() {
+export default function Hero({ scrollToBottom }: { scrollToBottom: () => void }) {
 
-  
+  const { setDisplayWalletConnectModal } = useContext(WalletContext);
   return (
     <section className="flex flex-col md:flex-row items-center justify-between min-h-screen pl-8 md:pl-16 lg:pl-24">
       {/* Left Side: Text Content */}
@@ -31,13 +33,13 @@ export default function Hero() {
         </motion.p>
         <div className="flex gap-4">
           <motion.button
-          
             className="fruit-button bg-primary neon-glow mt-6 text-2xl"
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.95 }}
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.7, duration: 0.6, ease: "easeOut" }}
+            onClick={scrollToBottom}
           >
             Join the Fun!
           </motion.button>
@@ -48,7 +50,12 @@ export default function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.7, duration: 0.6, ease: "easeOut" }}
-            onClick={() => window.open('https://github.com/DeFruit/fruit.club/blob/main/README.md', '_blank')}
+            onClick={() =>
+              window.open(
+                "https://github.com/DeFruit/fruit.club/blob/main/README.md",
+                "_blank"
+              )
+            }
           >
             Read the whitepaper
           </motion.button>

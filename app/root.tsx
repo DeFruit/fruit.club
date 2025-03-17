@@ -7,6 +7,7 @@ import {
 } from "@remix-run/react";
 import type { LinksFunction } from "@remix-run/node";
 import "./tailwind.css";
+import { Providers } from "./service/providers";
 
 // Fonts
 export const links: LinksFunction = () => [
@@ -25,17 +26,22 @@ export const links: LinksFunction = () => [
 export function Layout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      <head>
-        <meta charSet="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <Meta />
-        <Links />
-      </head>
-      <body className="animated-bg text-text">
-        {children}
-        <ScrollRestoration />
-        <Scripts />
-      </body>
+      <Providers>
+        <head>
+          <meta charSet="utf-8" />
+          <meta name="viewport" content="width=device-width, initial-scale=1" />
+          <Meta />
+          <Links />
+          <script
+            dangerouslySetInnerHTML={{ __html: "window.global = window;" }}
+          />
+        </head>
+        <body className="animated-bg text-text">
+          {children}
+          <ScrollRestoration />
+          <Scripts />
+        </body>
+      </Providers>
     </html>
   );
 }
