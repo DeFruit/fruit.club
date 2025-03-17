@@ -40,7 +40,7 @@ export default function ThemeSwitcher({ setTheme }: ThemeSwitcherProps) {
               setActiveTheme(t.name);
             }}
           >
-            <img src={t.imgPath} alt={t.name}  />
+            <img src={t.imgPath} alt={t.name} className="w-6 h-6" />
           </button>
         ))}
       </div>
