@@ -1,10 +1,11 @@
 import { motion } from "framer-motion";
 import { useContext, useRef } from "react";
 import { WalletContext } from "~/context/walletContext";
-
+import { useNavigate } from "@remix-run/react";
 export default function Hero({ scrollToBottom }: { scrollToBottom: () => void }) {
 
   const { setDisplayWalletConnectModal } = useContext(WalletContext);
+  const navigate = useNavigate();
   return (
     <section className="flex flex-col md:flex-row items-center justify-between min-h-screen mx-3 md:pl-16 lg:pl-24 mt-16 sm:mt-1">
       {/* Left Side: Text Content */}
@@ -39,7 +40,9 @@ export default function Hero({ scrollToBottom }: { scrollToBottom: () => void })
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.7, duration: 0.6, ease: "easeOut" }}
-            onClick={scrollToBottom}
+            onClick={() => {
+              navigate("/hub");
+            }}
           >
             Fruit curious?
           </motion.button>
