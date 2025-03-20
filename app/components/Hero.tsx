@@ -40,9 +40,10 @@ export default function Hero({ scrollToBottom }: { scrollToBottom: () => void })
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.7, duration: 0.6, ease: "easeOut" }}
-            onClick={() => {
+            /* onClick={() => {
               navigate("/hub");
-            }}
+            }} */
+           onClick={scrollToBottom}
           >
             Fruit curious?
           </motion.button>
